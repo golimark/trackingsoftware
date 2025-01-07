@@ -1,4 +1,90 @@
 {% extends "../utils/layout.html" %}
-
+{% load static %}
 {% block content %}
+<nav class="nav navbar navbar-expand-lg navbar-light bg-primary p-3">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-5 me-5" href="#">
+            <span class="text-light fst-italic fw-bold fs-1">Tracker</span>
+            <i class="fa fa-map-marker text-light fs-1"></i>
+            <span class="text-default fw-bold text-warning fs-3">ware</span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills me-5">
+                <li class="nav-item">
+                    <a class="nav-link active text-light fs-5" aria-current="page" href=""><i
+                            class="fa fa-map-marker pe-2" aria-hidden="true"></i>Monitor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-5" href=""><i class="fa fa-area-chart pe-2"
+                            aria-hidden="true"></i>Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-5" href=""><i class="bi bi-cpu pe-2"></i>Device</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-5" href="" tabindex="-1" aria-disabled="true"><i
+                            class="fa fa-user pe-2"></i>Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-5" href=""><i class="fa fa-video-camera pe-2"></i>Video</a>
+                </li>
+                <li class="nav-item pe-2">
+                    <a class="nav-link text-light fs-5" href=""><i class="fa fa-truck pe-2"></i>Fleet</a>
+                </li>
+
+                <!-- <li class="nav-item text-light fs-5">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-search ps-2"></i></a>
+                  </li> -->
+                <form class="d-flex" role="search">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <button class="btn btn-outline-info text-light" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+
+            </ul>
+        </div>
+
+        <div class="d-flex navbar" >
+            <div class="dropdown me-4"> <a href="#" class="text-white" id="notificationsDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa fa-bell notification-icon"></i>
+                </a>
+            </div>
+
+            <div class="dropdown me-4">
+                <a href="" class="text-white" style="text-decoration: none">
+                    <i class="bi bi-coin"></i> 700
+                </a>
+            </div>
+
+            <!-- Settings with Dropdown -->
+            <div class="dropdown me-4">
+                <a href="#" class="nav-link text-white dropdown-toggle" id="settingsDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                   BaifamGroup
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+                    <li><a class="dropdown-item" href="#"> <i class="bi bi-gear"></i> Settings</a></li>
+                    <li>
+                        <a class="dropdown-item" href="">  <i class="bi bi-envelope-fill"></i> Messages</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href=""> <i class="bi bi-envelope-fill"></i>  Mail Push Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href=""> <i class="bi bi-send"></i> Command</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="">  <i class="bi bi-question-circle"></i> Help</a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href=""><i class="bi bi-power"></i> Logout
+                            <a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</nav>
 {% endblock %}

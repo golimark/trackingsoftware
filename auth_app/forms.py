@@ -8,7 +8,7 @@ class LoginForm(AuthenticationForm):
         fields = ["username", "password"]
 
         widgets = {
-            'password': forms.PasswordInput(attrs={'class': 'form-field'}),
+            'password': forms.PasswordInput(attrs={'class': 'input-group-text form-field'}),
         }
 
     def __init__(self, *args, **kwargs):
