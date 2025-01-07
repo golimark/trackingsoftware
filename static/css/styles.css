@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #3b7aff;
+    --white-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 10%);
+    --form-outline-color: hsl(0, 0%, 85%);
+    --transition: 300ms ease-in-out all
+}
+
+.text, .link, .btn {
+    transition: var(--transition);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+.text-default {
+    color: var(--text-color);
+}
+
+.link-default {
+    color: var(--text-color);
+}
+.link-default:focus,
+.link-default:hover {
+    color: var(--primary-color);
+}
+
+.link-primary {
+    color: var(--primary-color);
+}
+.link-primary:focus,
+.link-primary:hover {
+    color: var(--primary-color);
+}
+
+
+.btn {
+    outline: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    display: grid;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+section.auth {
+    background-color: var(--primary-color);
+    block-size: 100vh;
+    inline-size: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.auth-area {
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 40%, 0.315);
+    border-radius: 10px;
+    inline-size: 30svw;
+    block-size: 80svh;
+    padding-inline: 3rem;
+    grid-template-rows: 9fr 1fr;
+}
+.auth-area .form-area {
+    align-content: center;
+}
+
+.auth-area .logo {
+    font-size: 40px;
+    font-weight: 700;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    gap: .25rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.form {
+    display: grid;
+}
+.auth-form {
+    gap: 1rem;
+}
+
+.form .form-group {
+    display: grid;
+    gap: .5rem;
+}
+
+.form-group p:has(.form-field) {
+    display: grid;
+    gap: .5rem;
+}
+form input[type="submit"] {
+    cursor: pointer;
+}
+
+.form-group .form-field {
+    padding: .5rem 1rem;
+    color: var(--text-color);
+    outline: 1px solid var(--form-outline-color);
+    border: none;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.form-actions-area:has(.btn.long) {
+    display: grid;
+    justify-items: stretch;
+}
+
+.form-group .form-field:focus,
+.form-group .form-field:focus-within {
+    outline: 1px solid var(--primary-color);
+}
+
+.form-group .helptext {
+    display: none;
+}
+.form-group.with-helptext .helptext {
+    display: grid;
+}
+
+.auth-form label {
+    color: hsl(0, 0%, 40%);
+}
+.auth-form .link {
+    font-size: .9rem;
+}
+.auth-form .field-actions {
+    justify-content: right;
+}
+.auth-area .footer .link-default {
+    color: hsl(0, 0%, 40%);
+}

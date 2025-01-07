@@ -1,0 +1,40 @@
+{% extends "../utils/layout.html" %}
+
+{% block content %}
+<section class="auth">
+    <div class="auth-area grid">
+        <div class="form-area grid">
+            <div class="form-header">
+                <h1 class="logo">
+                    <span class="text-primary" style="font-style: italic;">Tracker</span>
+                    <span class="text-default" style="font-size: 25px;">
+                        <span>ware</span>
+                        <span class="text-primary"><i class="fa fa-map-marker"></i>
+                    </span>
+                </span>
+                </h1>
+            </div>
+            <div class="form-body">
+                <form class="auth-form form" action="{% url 'auth_app:login' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.as_p }}
+                        <div class="field-actions grid">
+                            <a href="" class="link link-default">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <div class="form-actions-area grid">
+                        <input type="submit" value="Login" class="form-action btn btn-primary long">
+                        <a href="" class="link link-primary self-end">Demo>></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer grid columns centered">
+            <a href="" class="link link-default">Terms of Service</a>
+            <span class="link-default">|</span>
+            <a href="" class="link link-default">Privacy Policy</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
