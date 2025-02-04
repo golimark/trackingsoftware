@@ -140,8 +140,8 @@ form input[type="submit"] {
 }
 
 .nav-item{
-    text-align: center;!important
+    text-align: center!important;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 0 .5rem;!important
+    padding: 0 0.5rem!important;
 }

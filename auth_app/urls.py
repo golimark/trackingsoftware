@@ -4,5 +4,6 @@ from auth_app import views as AuthAppViews
 app_name = "auth_app"
 
 urlpatterns = [
-    path("login/", AuthAppViews.LoginView.as_view(), name="login")
+    path("login/", AuthAppViews.login_view, name="login"),
+    path("logout/", AuthAppViews.logout_view, name="logout")
 ]

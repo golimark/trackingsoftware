@@ -2,14 +2,30 @@
 
 {% block content %}
 <section class="auth">
+    {% if messages %}
+    <center><ul class="messages">
+        {% for message in messages %}
+            <!-- <li class="{{ message.tags }}">{{ message }}</li> -->
+            <div id="custom-alert" style="display: flex; align-items: center; justify-content: center; text-align: left; color: #e93c3c; background-color: #f8d7da; border: 1px solid #f5c2c7; border-radius: 5px; width: fit-content; padding: 10px 20px; margin: 10px auto;">
+                <span style="margin-right: 10px; color: #e93c3c; font-size: 18px;">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <!-- Ensure you load Font Awesome -->
+                </span>
+                <strong class="{{ message.tags }}" role="alert">{{ message }}</strong>
+                <button type="button" id="close-alert-btn" style="padding-left: 15px; background: none; border: none; font-size: 18px; color: #e93c3c; cursor: pointer;" data-bs-dismiss="alert" aria-label="Close">
+                    &times;
+                </button>
+            </div>
+        {% endfor %}
+    </ul></center>
+    {% endif %}
     <div class="auth-area grid">
         <div class="form-area grid">
             <div class="form-header">
                 <h1 class="logo">
                     <span class="text-primary" style="font-style: italic;">Tracker</span>
                     <span class="text-default" style="font-size: 25px;">
-                        <span>ware</span>
-                        <span class="text-primary"><i class="fa fa-map-marker"></i>
+                        <span class="text-primary fs-1"><i class="fa fa-map-marker"></i>
+                        <span class="fw-bold text-warning">ware</span>
                     </span>
                 </span>
                 </h1>
@@ -45,4 +61,12 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.getElementById('close-alert-btn').addEventListener('click', function () {
+        const alertBox = document.getElementById('custom-alert');
+        alertBox.style.display = 'none'; // Hide the alert box
+    });
+</script>
+
 {% endblock %}
